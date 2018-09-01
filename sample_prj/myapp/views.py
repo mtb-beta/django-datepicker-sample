@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from myapp.forms import MyModelForm
 
-# Create your views here.
+def datepicker_view(requests):
+    form = MyModelForm()
+    return render(requests, 'mymodel_form.html', {'form': form})
